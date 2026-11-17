@@ -13,7 +13,7 @@ The second engagement analyses Duka Electronics H1 2026 sales data and presents 
 - `board_report.ipynb` — storyboard, chart makeover and code used to create the board report.
 - `figures/` — student EDA charts and the before-and-after chart makeover.
 - `reports/duka_board_report.png` — final one-page Duka Electronics board report.
-- `dashboard.md` — Looker Studio dashboard link and screenshots.
+- `dashboard.md` — public Looker Studio dashboard link and screenshots.
 - `requirements.txt` — Python libraries required for the analysis.
 
 ## How to Run the Project
@@ -34,7 +34,10 @@ The second engagement analyses Duka Electronics H1 2026 sales data and presents 
 
 `python generate_data.py`
 
-This creates `student_performance.csv` and `duka_sales.csv`.
+This creates:
+
+- `student_performance.csv`
+- `duka_sales.csv`
 
 5. Open and run `student_eda.ipynb` from top to bottom.
 
@@ -77,6 +80,12 @@ The County Education Office should prioritise the 99 At Risk learners, especiall
 
 The school-type performance gap should also be investigated further. Additional information on teacher availability, household conditions, class size and learning resources would help explain why the gap remains after comparing attendance and study-hour groups.
 
+## Student EDA Limitations
+
+The student-performance dataset is synthetic and does not include every factor that could affect academic performance. Important variables such as household income, teacher quality, class size, learning resources and previous academic performance are not available.
+
+The relationships between study hours, attendance, school type and scores represent association rather than proof of causation. The study-hours trend line assumes a linear relationship and should not be used to make predictions far outside the observed range.
+
 # Engagement 2: Duka Electronics Board
 
 Duka Electronics generated KES 71.8 million in H1 2026.
@@ -93,10 +102,25 @@ The most important change was in branch momentum between Q1 and Q2. Eldoret and 
 
 ## Board Summary
 
-Duka Electronics generated KES 71.8 million in H1 2026, with Nairobi contributing the largest share of revenue at about 36%. Revenue reached its highest level in April before weakening in May and June, showing softer momentum as the business entered H2. Laptops remained the strongest product by revenue, while In-store sales remained the leading channel. Branch performance was uneven. Eldoret showed the strongest Q2 improvement, while Kisumu and Nairobi also grew. In contrast, Mombasa and Nakuru recorded clear Q2 declines compared with Q1. The recommended H2 focus is to prioritise recovery actions in Mombasa and Nakuru while protecting the positive momentum in Eldoret, Kisumu and Nairobi. Management should monitor monthly revenue, branch performance, product results and channel performance through the Looker Studio dashboard so that H2 actions can be adjusted quickly when performance changes.
+Duka Electronics generated KES 71.8 million in H1 2026, with Nairobi contributing the largest share of revenue at about 36%. Revenue reached its highest level in April before weakening in May and June, showing softer momentum as the business entered H2. Laptops remained the strongest product by revenue, while In-store sales remained the leading channel. Branch performance was uneven. Eldoret showed the strongest Q2 improvement, while Kisumu and Nairobi also grew. In contrast, Mombasa and Nakuru recorded clear Q2 declines compared with Q1. The recommended H2 focus is to prioritise recovery actions in Mombasa and Nakuru while protecting positive momentum in Eldoret, Kisumu and Nairobi. Management should monitor monthly revenue, branch performance, product results and channel performance through the Looker Studio dashboard. This will allow the board to identify changes quickly, adjust H2 actions when needed, and direct marketing resources toward branches with the clearest recovery opportunities.
 
-## Limitations
+## Looker Studio Dashboard
 
-The student-performance data and Duka Electronics data are synthetic datasets created for learning purposes. Relationships identified in the student analysis represent association rather than proof of causation. Important factors such as household income, teacher quality and school resources are not included.
+Public dashboard:
 
-The Duka report covers only the first half of 2026. H1 patterns should therefore not be assumed to continue automatically into H2.
+https://datastudio.google.com/reporting/9aeae31c-3717-4fe5-b92a-24864752e9f2
+
+The dashboard includes:
+
+- Total Revenue scorecard
+- Total Orders scorecard
+- Average Order Value scorecard
+- Monthly revenue trend
+- Revenue by branch
+- Revenue by product
+- Date-range control
+- Channel filter
+
+## Duka Report Limitations
+
+The Duka Electronics dataset is synthetic and covers only January to June 2026. H1 patterns should not be assumed to continue automatically into H2. The report should therefore support management decisions together with continued monitoring through the dashboard.
